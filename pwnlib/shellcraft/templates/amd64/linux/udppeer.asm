@@ -22,5 +22,5 @@ from pwnlib.util.net import sockaddr
     /* Create address structure on stack */
     ${pushstr(sockaddr, False)}
 
-/* Connect the socket */
+/* Send data on udp socket */
     ${syscall('SYS_sendto', 'rbp', 'rsp', size, 0, 'rsp', addr_len)}
